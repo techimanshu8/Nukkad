@@ -1,0 +1,139 @@
+
+    * {
+          margin: 0;
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+     .setup, .schedule, .profile,
+      .home {
+          display: flex;
+          font-size: 28px;
+          height: 100%;
+      }
+
+      .box1 {
+          width: 50%;
+      }
+
+      .box2 {
+          width: 50%;
+          background: white;
+      }
+
+      .imgleft {
+          width: 100%;
+          height: 100vh;
+
+          min-height: 400px;
+      }
+
+      .logo1 {
+          margin-top: 20vh;
+          text-align: center;
+      }
+
+      .main {
+          display: flex;
+          justify-content: space-around;
+          text-align: center;
+          margin-top: 30px;
+      }
+
+      .header {
+          padding: 15px;
+          text-align: right;
+      }
+
+      .main2 input , .main2 select {
+          margin-top: 25px;
+          padding: 5px;
+          width: 100%;
+          font-size: 28px;
+          border: none;
+          outline: none;
+          border-bottom: 1px solid black;
+
+      }
+    .main2 input{ background: transparent;}
+      .main2 {
+          padding: 5px;
+          text-align: center;
+          max-width: 450px;
+          margin: auto;
+      }
+      .next{
+          text-align: end; 
+          margin-top: 3em;
+      }
+      .btn{
+          padding: 8px 25px;
+          font-size: 28px;
+          color: white;
+          background: black;
+          border: 1px solid black;
+          border-radius: 18px;
+      }
+.option{
+  background: url("https://img.icons8.com/material-rounded/24/000000/give-way.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  text-decoration: none;
+}
+.action .main2{
+  height: 80vh;
+  display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+}
+
+.acbtn{
+  margin: 10px 0;
+  width: 10em;
+  padding: 25px 0;
+}
+.thumbnail{
+  height: 200px;
+  background: rgb(178, 180, 176);
+  border-radius: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fileinp{
+display: none;
+}
+
+.pscript{
+  text-align: center;
+  margin: 50% auto;
+
+}
+
+  
+
+
+@media screen and (max-width: 650px) {
+  .box1{
+      display: none;
+  }
+  .box2{width: 100%;
+height: 100vh;
+background: rgb(255, 255, 255,0.6);
+}
+  body{
+      background:fixed ;
+      background-image: url("../img/img1.png");
+      background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 10px;
+  }
+  .main img{
+      width:80px;
+  }
+  .home, .btn ,.main2 input, .main2 select {
+      font-size: 20px;
+  }
+
+  }

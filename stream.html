@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stream</title>
+    <link rel="stylesheet" href="./css/style2.css">
+</head>
+<body>
+
+    <div class="page1">
+        <div class="col1">
+            <div class="card"> <div >Main Video Frame</div></div>
+            <div class="control">
+                <div >
+                    <span id="viewers" >Viewers : 0</span>
+                    <span class="align-right" id="status">Status : Not Live</span>
+                </div>
+                <div class="media">
+                 <button class="startbtn" onclick="LiveToggle(this)"> </button>
+                 <span>&#x25C0;
+                 <span style="color: black;" id="time">00:00</span>
+                 &#x25B6; </span>
+                </div>
+            </div>
+        </div>
+        <div class="col2">
+            <label for="uploadScript" class="btn " >Upload Script</label>
+                <input type="file" id ="uploadScript" class="d-none">
+        </div>
+    </div> 
+    
+</body>
+</html>
+<script>
+
+    function LiveToggle(e){
+      if(e.classList.contains('startbtn')){e.classList ="stopbutton"; 
+        document.getElementById('time').innerText ="00:20";
+        document.getElementById('status').innerText ="Status : Live";
+        document.getElementById('viewers').innerText ="Viewers  : 200";
+    }
+      else {e.classList = "startbtn";   document.getElementById('time').innerText ="00:00";
+      document.getElementById('status').innerText ="Status : Not Live";
+        document.getElementById('viewers').innerText ="Viewers  : 0";
+    }
+    }
+</script>
