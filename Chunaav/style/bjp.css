@@ -1,0 +1,234 @@
+* {
+  box-sizing: border-box;
+}
+
+/* body div {
+  background-color: aqua;
+} */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background: url("../imgs/Nukkad (2)-4.png") no-repeat fixed;
+  /* background-color: red; */
+  width: 100% ;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.8fr 1.2fr 1fr 0.8fr;
+  grid-template-areas:
+    "pb mv mv pol"
+    "pb mv mv can"
+    "pb sl sl can"
+    "vp vp vp can";
+  gap: 10px;
+}
+
+#party-banner {
+  grid-area: pb;
+  background: url('../imgs/Nukkad (2)-3.jpg');
+  background-size: cover;
+  margin: 0px 40px;
+  text-align: center;
+  min-height: 620px;
+  min-width: 150px;
+}
+
+#main-video {
+  grid-area: mv;
+  background-color: aquamarine;
+  margin-top: 30px;
+  border-radius: 10px;
+  text-align: center;
+  min-height: 340px;
+  min-width: 550px;
+}
+#main-video iframe {
+  width: 100%;
+  height: 100%;
+}
+
+#photo-of-leaders {
+  grid-area: pol;
+  margin-top: 50px !important;
+  margin: 0px 30px;
+  text-align: center;
+}
+.cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 100%;
+  gap: 10px;
+  margin: 0px 5px;
+}
+.photos {
+  display: none;
+  background-color: darkmagenta;
+  border-radius: 50%;
+  width: 95px;
+  height: 95px;
+}
+
+#candidate {
+  grid-area: can;
+  position: relative;
+}
+
+#about {
+  display: flex;
+  /* background-color: blue; */
+  margin: 0px 30px;
+  text-align: center;
+  min-height: 215px;
+  min-width: 200px;
+  align-items: center;
+  justify-content: center;
+}
+.ab-cont{
+  
+  line-height: 2rem;
+  color: white;
+  font-size: 25px;
+  font-weight: bolder;
+  
+}
+
+#photo-of-candidate {
+  background-color: chocolate;
+  text-align: center;
+  min-height: 300px;
+  position: absolute;
+  background: url('../imgs/poc.png') no-repeat center top;
+  width: 100%;
+  bottom: 0;
+}
+
+#slogan {
+  grid-area: sl;
+  background-color: blueviolet;
+  margin: 30px 40px;
+  border-radius: 10px;
+  text-align: center;
+  min-height: 122px;
+  background: url('../imgs/s-bjp.jpeg');
+}
+
+#viewer-portal {
+  grid-area: vp;
+  /* background-color: darkgray; */
+  margin-top: 5.5px;
+  margin-right: 50px;
+  text-align: center;
+  min-height: 85px !important;
+}
+#viewer-portal form{
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+form input{
+  height: 50px;
+  width: 30vw;
+  padding-left: 20px;
+}
+form button{
+  border: none;
+  background-color: transparent;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  /* margin: 0px 5px; */
+}
+form .a{
+  margin-left: 20px;
+}
+
+form button i{
+  position: absolute;
+  bottom: 11px;
+  left: 0;
+  font-size: 30px;
+  color: white;
+}
+
+@media screen and (max-width: 1300px) {
+  #party-banner {
+    margin-left: 0;
+    width: 250px !important;
+  }
+  #main-video {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #party-banner {
+    display: none;
+  }
+}
+@media screen and (max-width: 840px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2.2fr 0.6fr 2fr 3fr 1fr;
+    grid-template-areas:
+      "mv"
+      "sl"
+      "can"
+      "pol"
+      "vp";
+    gap: 0;
+  }
+  #main-video {
+    margin-top: 0;
+    border-radius: 0;
+    min-width: none;
+    min-height: 200px;
+  }
+  #slogan {
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+  }
+  #candidate {
+    display: flex;
+    flex-direction: row-reverse !important;
+    justify-content: space-evenly;
+  }
+  #candidate div {
+    display: block;
+    width: 50% !important;
+  }
+  #about {
+    margin: 0;
+  }
+  #photo-of-candidate {
+    min-width: 50px;
+    min-height: 50px;
+    position: relative;
+  }
+  #viewer-portal {
+    margin: 0;
+    margin-top: 20px;
+  }
+  #viewer-portal form{
+    flex-direction: column;
+  }
+  #viewer-portal form input{
+    width: 80vw;
+  }
+}
+@media screen and (max-width: 440px){
+  #viewer-portal form input{
+    width: 90vw;
+}
+}
